@@ -1,7 +1,5 @@
 // ⭐️ Example Challenge start ⭐️
-
-/**
- * ### Challenge `addNumbers`
+/*** ### Challenge `addNumbers`
  * 
  * @instructions
  * This function should be able to take two numbers as arguments
@@ -15,7 +13,6 @@
 function addNumbers(num1, num2) {
   return num1 + num2;
 }
-
 // ⭐️ Example Challenge end ⭐️
 
 
@@ -23,8 +20,7 @@ function addNumbers(num1, num2) {
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 
-/**
- * ### Challenge `sayGoodbye`
+/*** ### Challenge `sayGoodbye`
  * 
  * @instructions
  * This function should take an a name as an argument,
@@ -35,12 +31,17 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
+// function sayGoodbye(/* code here */) {
   /* code here */
-}
+  function sayGoodbye(name) {
+    return "Goodbye," + name + ". Have a great day.";
+  }
+  // Returns "Good morning Adam!"
+  sayGoodbye("Adam");
+  // Returns "Good morning Steph!"
+  sayGoodbye("Steph");
 
-/**
- * ### Challenge `temperatureCtoF`
+/*** ### Challenge `temperatureCtoF`
  * 
  * @instructions
  * This function should take an a temperature in celsius as an argument,
@@ -53,12 +54,17 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+// function temperatureCtoF(/* code here */) {
+//   /* code here */
+function temperatureCtoF(celsius) 
+{
+  var cTemp = celsius;
+  var cToFahr = cTemp * 9 / 5 + 32;
+  var message = cTemp+'\xB0C is ' + cToFahr + ' \xB0F.'; //xB0 is degree sign Ref: http://www.javascripter.net/faq/mathsymbols.htm
+    console.log(message);
 }
-
-/**
- * ### Challenge `temperatureInF`
+/*** ### Challenge `temperatureInF`
+ 
  * 
  * @instructions
  * This function should take an a temperature and a unit (either 'F' or 'C') as arguments,
@@ -74,10 +80,18 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
-}
+// function temperatureInF(/* code here */) {
+//   /* code here */
 
+function fToC(fahrenheit) 
+{
+  var fTemp = fahrenheit;
+  var fToCel = (fTemp - 32) * 5 / 9;
+  var message = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
+    console.log(message);
+}
+// cToF(60);
+// fToC(45);
 
 /**
  * ### Challenge `makePersonObject`
@@ -99,8 +113,8 @@ function makePersonObject(/* code here */) {
   /* code here */
 }
 
-/**
- * ### Challenge `getName`
+/** * ### Challenge `getName`
+
  * 
  * @instructions
  * This function takes as its only argument
@@ -116,9 +130,7 @@ function getName(/* code here */) {
   /* code here */
 }
 
-
-/**
- * ### Challenge `appleIndex`
+/** * ### Challenge `appleIndex`
  * 
  * @instructions
  * This function takes as its only argument an array 
@@ -136,8 +148,7 @@ function appleIndex(/* code here */) {
   /* code here */
 }
 
-/**
- * ### Challenge `isItAnApple`
+/*** ### Challenge `isItAnApple`
  * 
  * @instructions
  * This function takes as its only argument an array 
@@ -155,10 +166,7 @@ function isItAnApple(/* code here */) {
   /* code here */
 }
 
-
-
-/*
-// ⭐️ Example Test Data ⭐️
+/*// ⭐️ Example Test Data ⭐️
 
 var inventory = [
   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
@@ -178,8 +186,7 @@ var inventory = [
   /// ... Truncated
 ]
 */
-/**
-  * ### Example Array Challenge:
+/*** ### Example Array Challenge:
   * 
   * @instructions
   * get3rdCar() should return the string `The is a Land Rover Defender Ice Edition`
@@ -196,9 +203,7 @@ function get3rdCar(inventory) {
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 
-
-/**
- * ### Challenge `getCarInfoByIndex`
+/*** ### Challenge `getCarInfoByIndex`
  * 
  * @instructions
  * getCarInfoByIndex takes two arguments:
@@ -213,8 +218,7 @@ function getCarInfoByIndex(inventory, index) {
   /* code here */
 }
 
-/**
- * ### Challenge `getLastCarInfo`
+/*** ### Challenge `getLastCarInfo`
  * 
  * @instructions
  * getLastCarInfo takes a single argument:
@@ -228,8 +232,7 @@ function getLastCarInfo(/* code here */) {
   /* code here */
 }
 
-/**
- * ### Challenge `getModelYears`
+/*** ### Challenge `getModelYears`
  * 
  * @instructions
  * We need the years from every car in the inventory!
@@ -241,8 +244,7 @@ function getModelYears(/* code here */) {
   /* code here */
 }
 
-/**
- * ### Challenge `getCarInfoById`
+/*** ### Challenge `getCarInfoById`
  *  * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
  * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
  * 
@@ -259,8 +261,7 @@ function getCarInfoById(/* code here */) {
   /* code here */
 }
 
-/**
- * ### Challenge `getOlderCars`
+/*** ### Challenge `getOlderCars`
  * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
  * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
  * 
@@ -277,8 +278,7 @@ function getOlderCars(/* code here */) {
   /* code here */
 }
 
-/**
- * ### Challenge `getGermanCars`
+/*** ### Challenge `getGermanCars`
  * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
  * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
  * 
@@ -294,8 +294,7 @@ function getGermanCars(/* code here */) {
   /* code here */
 }
 
-/**
- * ### Challenge `carMaker`
+/*** ### Challenge `carMaker`
  * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
  * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
  * 
