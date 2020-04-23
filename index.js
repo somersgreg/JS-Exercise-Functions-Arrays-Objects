@@ -83,7 +83,7 @@ function temperatureCtoF(celsius)
 // function temperatureInF(/* code here */) {
 //   /* code here */
 
-function fToC(fahrenheit) 
+function temperatureInF(fahrenheit) 
 {
   var fTemp = fahrenheit;
   var fToCel = (fTemp - 32) * 5 / 9;
