@@ -93,8 +93,7 @@ function temperatureInF(fahrenheit)
 // cToF(60);
 // fToC(45);
 
-/**
- * ### Challenge `makePersonObject`
+/*** ### Challenge `makePersonObject`
  * 
  * @instructions
  * This function should take an id, a name and an email as arguments,
@@ -109,10 +108,16 @@ function temperatureInF(fahrenheit)
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
-}
-
+// function makePersonObject(/* code here */) {
+//   /* code here */
+// }
+function makePersonObject(id, name, email)  {
+  return{
+    id: 5,
+    name:"Gregory",
+    email: "somersgreg@yahoo.com"
+  }
+};
 /** * ### Challenge `getName`
 
  * 
@@ -130,7 +135,7 @@ function getName(/* code here */) {
   /* code here */
 }
 
-/** * ### Challenge `appleIndex`
+/*** ### Challenge `appleIndex`
  * 
  * @instructions
  * This function takes as its only argument an array 
