@@ -34,12 +34,10 @@ function addNumbers(num1, num2) {
 // function sayGoodbye(/* code here */) {
   /* code here */
   function sayGoodbye(name) {
-    return "Goodbye," + name + ". Have a great day.";
+    return "Goodbye, " + name + ". Have a great day.";
   }
   // Returns "Good morning Adam!"
-  sayGoodbye("Adam");
-  // Returns "Good morning Steph!"
-  sayGoodbye("Steph");
+  // sayGoodbye("Adam");
 
 /*** ### Challenge `temperatureCtoF`
  * 
@@ -54,17 +52,11 @@ function addNumbers(num1, num2) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-// function temperatureCtoF(/* code here */) {
-//   /* code here */
-function temperatureCtoF(celsius) 
-{
-  var cTemp = celsius;
-  var cToFahr = cTemp * 9 / 5 + 32;
-  var message = cTemp+'\xB0C is ' + cToFahr + ' \xB0F.'; //xB0 is degree sign Ref: http://www.javascripter.net/faq/mathsymbols.htm
-    console.log(message);
+function temperatureCtoF(celsius) {
+    var convertC2F = Math.round((celsius * 9 / 5) + 32);
+    return convertC2F;
 }
 /*** ### Challenge `temperatureInF`
- 
  * 
  * @instructions
  * This function should take an a temperature and a unit (either 'F' or 'C') as arguments,
@@ -80,19 +72,15 @@ function temperatureCtoF(celsius)
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-// function temperatureInF(/* code here */) {
-//   /* code here */
-
-function temperatureInF(fahrenheit) 
-{
-  var fTemp = fahrenheit;
-  var fToCel = (fTemp - 32) * 5 / 9;
-  var message = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
-    console.log(message);
+function temperatureInF(temp, unit) {
+  if (unit === "F") {
+    return temp + unit;
+  }
+  else if (unit === "C"){
+    return temperatureCtoF(temp) + "F";
+  }
+  else return "Please enter Temp with either C or F to convert."
 }
-// cToF(60);
-// fToC(45);
-
 /*** ### Challenge `makePersonObject`
  * 
  * @instructions
@@ -108,16 +96,14 @@ function temperatureInF(fahrenheit)
  *   email: "leia@leia.com",
  * }
 */
-// function makePersonObject(/* code here */) {
-//   /* code here */
-// }
 function makePersonObject(id, name, email)  {
-  return{
-    id: 5,
-    name:"Gregory",
-    email: "somersgreg@yahoo.com"
+  let personDetail = {
+    "id": id,
+    "name": name,
+    "email": email
   }
-};
+  return personDetail;
+}
 /** * ### Challenge `getName`
 
  * 
@@ -342,5 +328,5 @@ if (typeof exports !== 'undefined') {
   if (getModelYears) { module.exports.getModelYears = getModelYears }
   if (getOlderCars) { module.exports.getOlderCars = getOlderCars }
   if (getGermanCars) { module.exports.getGermanCars = getGermanCars }
- 
+
 }
